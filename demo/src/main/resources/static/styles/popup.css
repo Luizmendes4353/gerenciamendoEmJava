@@ -1,41 +1,4 @@
-#btn-abrir {
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-/* Estilo do elemento que contém o pop up */
-#div-pop-up {
-  position: fixed; /* O pop up fica fixo na tela */
-  top: 50%; /* O pop up fica no meio da tela verticalmente */
-  left: 50%; /* O pop up fica no meio da tela horizontalmente */
-  transform: translate(-50%, -50%); /* O pop up fica centralizado */
-  width: 300px; /* Largura do pop up */
-  height: 200px; /* Altura do pop up */
-  background-color: white; /* Cor de fundo do pop up */
-  border: 2px solid black; /* Borda do pop up */
-  z-index: 1000; /* O pop up fica acima dos outros elementos */
-  display: none; /* Inicialmente, o pop up está escondido */
-}
-
-/* Estilo do conteúdo do pop up */
-#conteudo-pop-up {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Estilo do botão que fecha o pop up */
-#btn-fechar {
-  position: absolute; /* O botão fica posicionado de forma absoluta */
-  top: 10px; /* O botão fica a 10 pixels do topo do pop up */
-  right: 10px; /* O botão fica a 10 pixels da direita do pop up */
-  font-size: 20px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-/* Estilo do elemento que cria o efeito de transparência na tela */
-#overlay {
+dialog::backdrop {
   position: fixed; /* O overlay fica fixo na tela */
   top: 0; /* O overlay fica no topo da tela */
   left: 0; /* O overlay fica na esquerda da tela */
@@ -44,10 +7,21 @@
   background-color: black; /* Cor de fundo do overlay */
   opacity: 0.5; /* Opacidade do overlay */
   z-index: 999; /* O overlay fica abaixo do pop up */
-  display: none; /* Inicialmente, o overlay está escondido */
 }
 
-/* Classe que mostra o pop up e o overlay */
-.show {
-  display: block;
+dialog{
+  position: fixed; /* O pop up fica fixo na tela */
+  top: 50%; /* O pop up fica no meio da tela verticalmente */
+  left: 50%; /* O pop up fica no meio da tela horizontalmente */
+  transform: translate(-50%, -50%); /* O pop up fica centralizado */
+  width: 700px; /* Largura do pop up */
+  height: 500px; /* Altura do pop up */
+  background-color: white; /* Cor de fundo do pop up */
+  border: 2px solid black; /* Borda do pop up */
+  z-index: 1000; /* O pop up fica acima dos outros elementos */
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+  
 }
